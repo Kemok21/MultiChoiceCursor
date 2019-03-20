@@ -60,11 +60,11 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
                                 mCursor.moveToPosition(which);
                                 int id = mCursor.getInt(mCursor.getColumnIndexOrThrow(FakeEntry._ID));
-                                Uri currentClimberUri = ContentUris.withAppendedId(FakeEntry.CONTENT_URI, id);
+                                Uri currenFakeUri = ContentUris.withAppendedId(FakeEntry.CONTENT_URI, id);
 
                                 ContentValues values = new ContentValues();
                                 values.put(FakeEntry.COLUMN_IS_CHECKED, (isChecked) ? 1 : 0);
-                                getContentResolver().update(currentClimberUri, values, null, null);
+                                getContentResolver().update(currentFakeUri, values, null, null);
                             }
                         });
 
